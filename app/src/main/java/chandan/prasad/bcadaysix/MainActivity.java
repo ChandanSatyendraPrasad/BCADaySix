@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.Toast;
@@ -29,6 +30,10 @@ ToggleButton toggle;
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(MainActivity.this, "Topic Cleared.", Toast.LENGTH_SHORT).show();
+                            //Intent to switch screen
+                            Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                            startActivity(intent);
+                            finish();
 
                         }
                     });
