@@ -33,6 +33,20 @@ CheckBox checkBox,checkBox1;
             }
         });
 
+        checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b)
+                {
+                    Toast.makeText(MainActivity2.this,checkBox1.getText().toString().trim()+ "is selected", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity2.this,checkBox1.getText().toString().trim()+ "is not selected", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         button_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
